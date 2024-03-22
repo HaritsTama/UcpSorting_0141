@@ -12,6 +12,7 @@ using namespace std;
 // pass bisa dihitung dengan n - 1
 
 int j, n, i, min_index, Nayo[41], temp;
+int pass = 1;
 
 void input() {
 	while (true) {
@@ -28,29 +29,31 @@ void input() {
 	cout << "Masukan Elemen Array" << endl;
 	cout << "====================" << endl;
 
-	for (int i = 0; i < n; i++) {
-		cout << "Data ke-" << (i + 1) << " : ";
-		cin >> Nayo[i];
+	for (int j = 0; j < n; j++) {
+		cout << "Data ke-" << (j + 1) << " : ";
+		cin >> Nayo[j];
 	}
 }
 
 void Sorting()
 {
-	for (j = 0; j = n - 2; j++)
+	do
 	{
-		min_index = j;
-		for (i = j + 1; i = n - 1; i++)
+		for (j = 0; j = n - 2; j++)
 		{
-			if (Nayo[i] < Nayo[min_index])
-			{
-				min_index = i;
-			}
-
+			min_index = j;
+			for (i = j + 1; i = n - 1; i++)
+				if (Nayo[i] < Nayo[min_index])
+				{
+					min_index = i;
+				}
+			temp = Nayo[j];
+			Nayo[j] = Nayo[min_index];
+			Nayo[min_index] = temp;
 		}
-
-	}
-
+	}while (pass <= n - 1);
 }
+
 
 void display()
 {
