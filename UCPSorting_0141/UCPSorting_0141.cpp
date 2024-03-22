@@ -39,11 +39,11 @@ void Sorting()
 {
 	do
 	{
-		for (j = 0; j = n - 2; j++)
+		for (j = 0; j <= n - 2; j++)
 		{
 			min_index = j;
-			for (i = j + 1; i = n - 1; i++)
-				if (Nayo[i] < Nayo[min_index])
+			for (i = j + 1; i <= n - 1; i++)
+				if (Nayo[i] >= Nayo[min_index])
 				{
 					min_index = i;
 				}
@@ -51,6 +51,7 @@ void Sorting()
 			Nayo[j] = Nayo[min_index];
 			Nayo[min_index] = temp;
 		}
+		pass = pass + 1;
 	}while (pass <= n - 1);
 }
 
