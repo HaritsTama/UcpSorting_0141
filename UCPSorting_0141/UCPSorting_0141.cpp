@@ -43,7 +43,7 @@ void Sorting()
 		{
 			min_index = j;
 			for (i = j + 1; i <= n - 1; i++)
-				if (Nayo[i] >= Nayo[min_index])
+				if (Nayo[i] < Nayo[min_index])
 				{
 					min_index = i;
 				}
