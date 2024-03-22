@@ -8,4 +8,7 @@ using namespace std;
 // 2. Pertama kita mencari data yang paling kecil dari Index 0 sampai Index n - 1, setelah itu kita mengambil data yang paling kecil tersebut dan setelah itu kita letakan di index[0] Ex : 7 1 4 6 5 -> 1 7 5 6 4
 // Lalu kita mencari lagi data yang paling kecil dari Index 1 sampai Index n - 1, setelah itu kita ambil data paling kecil dan menukarnya dengan data di Index[1] Ex : 1 7 5 6 4 -> 1 4 5 6 7
 // Kita lanjutkan tukar menukar ini dengan Index[2], Index[3], dan seterusnya sampai urutan menjadi benar Ex : 1 4 5 6 7 (sudah urut dari kecil ke besar)
-//
+// 3. Dengan menggunakan pass, pass bisa dibilang mirip dengan putaran yang dilakukan. Kita bisa meletakan pass ini di akhir kode sortir kita dengan menaikan nilai nya + 1 setiap putaran sortir
+// pass bisa dihitung dengan n - 1
+
+int j, n, i, min_index, Nayo[41];
