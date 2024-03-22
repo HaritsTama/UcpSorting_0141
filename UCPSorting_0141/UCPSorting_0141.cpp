@@ -33,3 +33,46 @@ void input() {
 		cin >> Nayo[i];
 	}
 }
+
+void Sorting()
+{
+	for (j = 0; j = n - 2; j++)
+	{
+		min_index = j;
+		for (i = j + 1; i = n - 1; i++)
+		{
+			if (Nayo[i] < Nayo[min_index])
+			{
+				min_index = i;
+			}
+
+		}
+
+	}
+
+}
+
+void display()
+{
+	cout << endl;
+	cout << "=================================" << endl;
+	cout << "Element Array yang telah tersusun" << endl;
+	cout << "=================================" << endl;
+	for (int j = 0; j < n; j++)
+	{
+		cout << Nayo[j] << endl;
+	}
+	cout << "Jumlah pass = " << n - 1 << endl;
+	cout << endl;
+}
+
+int main()
+{
+
+	input();
+	Sorting();
+	display();
+	system("pause");
+
+	return 0;
+}
